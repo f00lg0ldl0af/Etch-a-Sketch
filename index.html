@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etch a Sketch</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/044760a194.js" crossorigin="anonymous"></script> 
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"></script>
+
+    <script src="script.js" async></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1 class="title">Let's Paint Mona lisa!</h1>
+    </header>
+
+    <main class="main">
+        <div class="middle">
+            <div class="left-container">
+                <div class="left-user-settings"> 
+
+                    <button id="colorBtn">Single Mode</button>
+                    <button id="rainbowBtn">Rainbow Mode</button>
+                    <button id="eraserBtn">Erase</button>
+                    <button id="clearBtn">Clear</button>
+                    <button id="saveBtn">Save</button>
+
+                    <div class="grid-size">
+                        <div id="sizeValue">16 x 16</div>
+                        <input id="sizeSlider" type="range" value="16" min="1" max="64">
+                    </div>
+                </div>
+            </div>
+           
+            <div class="grid-container">
+                <div class="grid" id="grid"></div>
+            </div>
+        </div>
+        
+        <div class="bottom">
+            <div class="bottom-user-settings">
+                <div class="color-setting">
+                    <p>Paint Color</p>
+                    <input id="colorPicker" type="color" value="#000000">
+                </div>
+
+                <div class="background-setting">
+                    <p>Canvas Color</p>
+                    <input id="backgroundPicker" type="color" value="#000000">
+                </div> 
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>
+        Copyright ©
+        <script>
+          document.write(new Date().getFullYear())
+        </script>
+        f00lg0ldl0af
+        </p>
+        
+        <a href="https://github.com/f00lg0ldl0af" target="_blank">
+        <i class="fa-brands fa-github"></i
+      ></a>
+      <!--https://fontawesome.com/v6/icons/github?f=brands&s=solid-->
+    </footer>
+</body>
+</html>

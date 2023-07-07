@@ -1,0 +1,264 @@
+:root {
+    --primary-dark: #333;
+    --secondary-dark: #c0c0c0;
+    --primary-light: #f0eded;
+    --secondary-light: #fefefe;
+    --rainbow-color: var(--primary-light);
+} /*:root selector has higher specificity than the html selector*/
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;  /*include padding and border in element's total width and height*/
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    line-height: normal;/*sets distance between lines of text*/
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--primary-light);
+    color: var(--primary-dark);
+    font-family: 'VT323', monospace;
+    line-height: 1; 
+}
+
+button,
+input {
+    width: 100%;
+    border: none;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+    outline: none;
+}
+
+                            /*HEADER*/
+.header {
+    padding: 30px 0;
+    align-self: center;
+    margin: 0;  
+}
+
+.title {
+    text-align: center;
+    font-size: 8vh;
+    
+}
+
+                            /*HEADER*/
+                            /*GRID*/
+#grid {
+    display: inline-grid;
+    width: 100%;
+    height: 100%;
+    background-color: var(--secondary-light);
+}
+
+.grid-container {
+    display: flex;
+    aspect-ratio: 1 / 1;
+    height: 95%;
+    min-height: 300px;
+    margin: 0 35px;  
+    border: solid;
+        
+}
+
+.cell {
+    background-color: white;
+    border: 1px solid var(--primary-light);
+}
+
+.color-setting p, .background-setting p {
+    font-size: 2vw;
+    text-align: center;
+}
+
+                           /*GRID*/
+                            /*MAIN*/
+.main {
+    display: flex;
+    flex: 1 1 800px;
+    flex-direction: column;
+    align-self: center;
+    align-items: center;
+    width: 60%;
+    min-width: 800px;
+}
+
+.middle {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    width: 85vw;
+    min-width: 700px;
+    margin: 10px 30px 30px;       
+}
+
+.middle::after {
+    content: '';
+    flex-grow: 1;
+    align-self: center;
+  } /*this centres the middle stuff when I shrink the viewport*/
+
+.left-container {
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-end;
+    align-self: center;
+   
+  }
+
+.left-user-settings {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 45vh;
+    min-height: 200px;
+    max-width: 15vw;
+    background-color: var(--secondary-dark);
+    
+}
+
+.bottom {
+    display: flex;
+    flex: 1;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+ 
+}
+
+.bottom-user-settings {
+    display: flex;
+    align-items: center;
+    background-color: var(--secondary-dark); 
+}
+
+.background-setting, .color-setting {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 50px;
+  }
+
+                            /*BUTTONS*/
+button {
+    padding: 2px 2px;
+    border: 1px solid var(--primary-dark);
+    border-radius: 10px;
+    font-size: 2vw;
+    width: 75%;
+}
+
+button.active {
+    background-color: var(--primary-dark);
+    color: var(--primary-light);
+}
+
+button:hover,
+input[type="color"]:hover {
+    transform: scale(1.05);
+    transition: transform 0.2s ease-in-out; /*property name | duration | easing function*/
+}
+
+#rainbowBtn {
+    background: var(--rainbow-color);
+  }
+
+                            /*BUTTONS*/
+                            /*COLOR PICKER*/
+                           
+input[type='color'] {
+    -webkit-appearance: none;
+    position: relative;
+    background: var(--primary-light);
+    text-align: center;
+    border: .2vh solid var(--primary-dark);
+    display: flex;
+    justify-content: center;
+    width: 6.5vh;
+    height: 6.5vh;
+    transition: transform .2s;
+    border-radius: 1vw;
+                    }
+                              
+input[type="color"]:active {
+    transform: scale(1.02);
+    transition: transform 0.05s ease-in-out; 
+}
+
+input[type='color']::-webkit-color-swatch-wrapper {
+    padding: 0;
+  } /*removes default styling from input color element*/
+
+input[type='color']::-webkit-color-swatch {
+    border: none;
+    border-radius: 50px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+
+#sizeValue {
+    font-size: 30px;
+    text-align: center;  
+}
+                            /*COLOR PICKER*/     
+                            /*SLIDERS*/
+input[type='range'] {
+    -webkit-appearance: none;
+    background-color: var(--primary-light);
+  }
+
+input[type='range']::-webkit-slider-runnable-track {
+    height: 10px;
+    border: 1px solid var(--primary-dark);
+    border-radius: 25px;
+    background: var(--secondary-light);
+  }
+
+input[type='range']::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 24px;
+    height: 24px;
+    border-radius: 25px;
+    margin-top: -8px;
+    background: var(--primary-dark);
+  }
+                            /*SLIDERS*/
+                            /*MAIN*/
+
+                            /*FOOTER*/
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 14px;
+    max-height: 40px;
+    min-height: 7.5vh;
+    flex-grow: 1;
+    background-color: var(--primary-dark);
+    color: var(--primary-light);
+  }
+  
+
+.fa-github {
+    color: var(--primary-dark);
+    font-size: 30px;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .fa-github:hover {
+    transform: rotate(360deg) scale(1.2);
+  }
+
+                            /*FOOTER*/  
