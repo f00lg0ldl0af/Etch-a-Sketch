@@ -2,7 +2,7 @@
 This is a project under [The Odin Project](https://www.theodinproject.com/about). 
 
 # Description 
-This web application allows the user to draw anything from the imagination (like Leonardo Da Vinci).  
+This [web application](https://f00lg0ldl0af.github.io/Etch-a-Sketch/) allows the user to draw anything from the imagination (like Leonardo Da Vinci).  
 
 The user can choose:
 1. Paint color
