@@ -16,5 +16,5 @@ The user can choose:
 
 # Inspiration 
 * [Michal Osman](https://michalosman.github.io/etch-a-sketch/)
-* [Joshusooyaa] (https://joshusooyaa.github.io/etch-a-sketch/)
+* [Joshusooyaa](https://joshusooyaa.github.io/etch-a-sketch/)
 * [cats256](https://cats256.github.io/portfolio/projects/5/) 
