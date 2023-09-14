@@ -4,18 +4,18 @@
     --primary-light: #f0eded;
     --secondary-light: #fefefe;
     --rainbow-color: var(--primary-light);
-} /*:root selector has higher specificity than the html selector*/
+} 
 
 *,
 *::before,
 *::after {
-    box-sizing: border-box;  /*include padding and border in element's total width and height*/
+    box-sizing: border-box;  
     padding: 0;
     margin: 0;
 }
 
 h1 {
-    line-height: normal;/*sets distance between lines of text*/
+    line-height: normal;
 }
 
 body {
@@ -40,7 +40,6 @@ input {
     outline: none;
 }
 
-                            /*HEADER*/
 .header {
     padding: 30px 0;
     align-self: center;
@@ -53,14 +52,12 @@ input {
     
 }
 
-                            /*HEADER*/
-                            /*GRID*/
 #grid {
-    display: inline-grid;
+    display: inline-grid; 
     width: 100%;
     height: 100%;
     background-color: var(--secondary-light);
-}
+} 
 
 .grid-container {
     display: flex;
@@ -69,7 +66,6 @@ input {
     min-height: 300px;
     margin: 0 35px;  
     border: solid;
-        
 }
 
 .cell {
@@ -82,8 +78,6 @@ input {
     text-align: center;
 }
 
-                           /*GRID*/
-                            /*MAIN*/
 .main {
     display: flex;
     flex: 1 1 800px;
@@ -107,7 +101,7 @@ input {
     content: '';
     flex-grow: 1;
     align-self: center;
-  } /*this centres the middle stuff when I shrink the viewport*/
+} 
 
 .left-container {
     display: flex;
@@ -134,8 +128,7 @@ input {
     flex: 1;
     align-items: flex-start;
     justify-content: center;
-    width: 100%;
- 
+    width: 100%; 
 }
 
 .bottom-user-settings {
@@ -149,9 +142,8 @@ input {
     flex-direction: column;
     align-items: center;
     margin: 0 50px;
-  }
+}
 
-                            /*BUTTONS*/
 button {
     padding: 2px 2px;
     border: 1px solid var(--primary-dark);
@@ -168,15 +160,12 @@ button.active {
 button:hover,
 input[type="color"]:hover {
     transform: scale(1.05);
-    transition: transform 0.2s ease-in-out; /*property name | duration | easing function*/
+    transition: transform 0.2s ease-in-out; 
 }
 
 #rainbowBtn {
     background: var(--rainbow-color);
-  }
-
-                            /*BUTTONS*/
-                            /*COLOR PICKER*/
+}
                            
 input[type='color'] {
     -webkit-appearance: none;
@@ -199,31 +188,30 @@ input[type="color"]:active {
 
 input[type='color']::-webkit-color-swatch-wrapper {
     padding: 0;
-  } /*removes default styling from input color element*/
+} /*removes default styling from input color element*/
 
 input[type='color']::-webkit-color-swatch {
     border: none;
     border-radius: 50px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  }
+}
 
 #sizeValue {
     font-size: 30px;
     text-align: center;  
 }
-                            /*COLOR PICKER*/     
-                            /*SLIDERS*/
+
 input[type='range'] {
     -webkit-appearance: none;
     background-color: var(--primary-light);
-  }
+}
 
 input[type='range']::-webkit-slider-runnable-track {
     height: 10px;
     border: 1px solid var(--primary-dark);
     border-radius: 25px;
     background: var(--secondary-light);
-  }
+}
 
 input[type='range']::-webkit-slider-thumb {
     -webkit-appearance: none;
@@ -232,11 +220,8 @@ input[type='range']::-webkit-slider-thumb {
     border-radius: 25px;
     margin-top: -8px;
     background: var(--primary-dark);
-  }
-                            /*SLIDERS*/
-                            /*MAIN*/
+}
 
-                            /*FOOTER*/
 .footer {
     display: flex;
     justify-content: center;
@@ -248,17 +233,16 @@ input[type='range']::-webkit-slider-thumb {
     flex-grow: 1;
     background-color: var(--primary-dark);
     color: var(--primary-light);
-  }
+}
   
 
 .fa-github {
     color: var(--primary-dark);
     font-size: 30px;
     transition: transform 0.2s ease-in-out;
-  }
-  
-  .fa-github:hover {
-    transform: rotate(360deg) scale(1.2);
-  }
+}
 
-                            /*FOOTER*/  
+.fa-github:hover {
+    transform: rotate(360deg) scale(1.2);
+}
+

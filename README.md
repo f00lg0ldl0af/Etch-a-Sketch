@@ -14,7 +14,10 @@ The user can choose:
 4. Clear and start drawing anew 
 5. Save the drawing as a PNG file
 
+### Usage
+[View demo](https://f00lg0ldl0af.github.io/Etch-a-Sketch/):point_left:
+
 # Inspiration 
 * [Michal Osman](https://michalosman.github.io/etch-a-sketch/)
-* [Joshusooyaa] (https://joshusooyaa.github.io/etch-a-sketch/)
+* [Joshusooyaa](https://joshusooyaa.github.io/etch-a-sketch/)
 * [cats256](https://cats256.github.io/portfolio/projects/5/) 
